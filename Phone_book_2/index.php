@@ -28,9 +28,9 @@ class ContactView {
                 <td>{$row['email']}</td>
                 <td>{$row['phone']}</td>
                 <td>{$row['category']}</td>
-                <td>{$row['image']}</td>
+                <td><img src='{$row["image"]}' class='mw-10' style='width: 10%;'></td>
                 <td>
-                    <a class='btn btn-primary' href='/Phone_book_2/edit.php?id={$row['id']}'>Edit</a>
+                    <a class='btn btn-primary' href='/Phone_book_2/edit.php?id={$row['id']}'>Edit</a> 
                     <a class='btn btn-danger' href='/Phone_book_2/Delete.php?id={$row['id']}'>Delete</a>
                 </td>
             </tr>
@@ -60,6 +60,7 @@ $view = new ContactView();
         <table class="table">
             <thead>
                 <tr>
+                    <img src="" alt="">
                     <th>Id</th>
                     <th>Name</th>
                     <th>Email</th>

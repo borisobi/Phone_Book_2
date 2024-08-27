@@ -82,16 +82,17 @@ class ContactForm {
             $filename = $_FILES["image"]["name"];
             $filetype = $_FILES["image"]["type"];
             $filesize = $_FILES["image"]["size"];
-        
+            
+        // Check if file extension is allowed
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
-            // Check if file extension is allowed
+            
             if(!array_key_exists($ext, $allowed)) {
                 $this->errorMessage = "Error: Please select a valid file format.";
                 return;
             }
         
             // Check file size (max 5MB)
-            $maxsize = 5 * 1024 * 1024;
+            $maxsize = 5 * 500 * 500;
             if($filesize > $maxsize) {
                 $this->errorMessage = "Error: File size is larger than the allowed limit.";
                 return;
