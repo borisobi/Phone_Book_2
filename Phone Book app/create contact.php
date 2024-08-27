@@ -12,8 +12,7 @@
 </head>
 <body>
 <div class="login-form">
-    <form action="" method="post">
-        
+    <form action="../Phone Book app/includes/form handler.php" method="post">
 
         <h1>Create New Contact</h1> <br>
         <div class="input-icons">
@@ -28,7 +27,12 @@
          <br>
          <input type="address" class="box" placeholder="Address" name="address" required>
          <br>
-         <select name="category" id="category" name required >
+         <input type="file" class="box" placeholder="Upload image" name="image_upload" required accept=".jpg,.jpeg,.png">
+         <div style="display: hidden;">
+            <img src="" alt="">
+         </div>
+         <br>
+         <select name="category" class="category" name required >
             <option value="None">None</option>
             <option value="Family">Family</option>
             <option value="Friend">Friend</option>
@@ -39,15 +43,12 @@
          <input type="submit" value="Create Contact" class="submit">
          <br>
          <input type="submit" value="Cancel" class="cancel">
-         
+
+         <?php include 'C:\xampp\htdocs\Phone Book app\includes\form handler.php'; ?>
+
      </form>
 </div>
 
 
-<?php
- //Error handling 
- 
-
-?>
 </body>
 </html>

@@ -62,6 +62,7 @@
                         <td>$row[phone]</td>
                         <td>$row[category]</td>
                         <td>
+
                             <a  class='btn btn-primary' href='/Phone_book_2/edit.php?id=$row[id]'>Edit</a>
                             <a  class='btn btn-danger' href='/Phone_book_2/Delete.php?id=$row[id]'>Delete</a>
                         </td>

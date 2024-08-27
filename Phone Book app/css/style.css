@@ -30,8 +30,8 @@ body {
     overflow: hidden;
     text-align: center;
     margin-top: 150px;
-    width: 747.768px;
-     height: 713.465px;
+    width: 800px;
+     height: 900px;
     flex-shrink: 0;
     border-radius: 15px;
 border: 3px solid #000;
@@ -138,3 +138,71 @@ ul {
     font-weight: 700;
     font-size: 15px;
 }
+
+/*Phone book page*/
+.new_contact{
+    padding: 10px;
+    height: 49.649px;
+    border-radius: 12px;
+    border: 1px solid #D0D0D0;
+    background: #E9313B;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 120px;
+   
+}
+
+.delete_contact{
+    padding: 10px;
+    height: 49.649px;
+    border-radius: 12px;
+    border: 2px solid #E9313B;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #E9313B;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 120px;
+  
+}
+
+
+/*contact details*/
+
+.goback{
+    padding: 10px;
+    height: 49.649px;
+    border-radius: 12px;
+    border: 2px solid #E9313B;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #E9313B;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+
+   
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #E9313B;
+  }
+
+  .category{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+
+  }

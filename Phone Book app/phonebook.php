@@ -16,15 +16,16 @@
         
 
         <h1>MY PHONEBOOK</h1> <br>
-        <a href="../Phone Book app/create contact.php">Add new contact</a>
-        <a href="">Delete contact</a>
+        <a href="../Phone Book app/create contact.php" class="new_contact">Add new contact</a>
+        <a href="../Phone Book app/delete.php?id" class="delete_contact">Delete contact</a> <br> <br>
         <?php include 'C:\xampp\htdocs\Phone Book app\includes\form handler.php'; ?>
         <ul>
-            <li ></li>
+            
         </ul>
        
      </form>
 </div>
+
 
 </body>
 </html>

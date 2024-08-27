@@ -16,14 +16,19 @@
     <form action="">
 
         <h1>MY PHONEBOOK</h1> <br>
-        
+        <a href="../Phone Book app/phonebook.php" class="goback">Go back</a> <br>
         <?php include 'C:\xampp\htdocs\Phone Book app\includes\form handler.php'; ?>
         <br><br><br>
-        <a href="#" class="goback">Edit Contact</a>
-        <a href="../Phone Book app/phonebook.php" class="goback">Go back</a>
-        <ul>
-
-        </ul>
+         
+        <h1>Contact List</h1>
+  <ul>
+    <?php foreach ($contacts as $contact) : ?>
+      <li>
+        <?= $contact->name ?>
+        <a href="delete.php?id=<?= $contact->id ?>">Delete</a>
+      </li>
+    <?php endforeach; ?>
+  </ul>
      </form>
 </div>
 
