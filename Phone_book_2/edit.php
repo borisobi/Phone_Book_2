@@ -145,6 +145,13 @@ else {
             </div>
 
             <div class="row mb-3">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Image</label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control" id="colFormLabel" name="image">
+                </div>
+            </div>
+
+            <div class="row mb-3">
                 <div class="d-grid gap-2 d-md-block">
                     <button class="btn btn-primary" type="submit">Save Changes</button>
                 </div>
