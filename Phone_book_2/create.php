@@ -72,8 +72,16 @@ class ContactForm {
             $this->errorMessage = "Please enter a valid email address.";
             return false;
         }
+        //validation for contact 
+        if (!preg_match('/^[0-9+\(\)#\.\\s\/ext-]+$/', $this->phone)) {
+            $this->errorMessage = "Please enter a valid phone number (only numbers allowed).";
+            return false;
+        }
+        
         return true;
     }
+
+   
 
     // Method to handle image upload
     private function handleImageUpload() {
@@ -160,7 +168,7 @@ $form->handleSubmission($db);
             </div>
         <?php endif; ?>
 
-        <form method="post" enctype="multipart/form-data" onsubmit="return alert('New contact has been created')" >
+        <form method="post" enctype="multipart/form-data" onsubmit="return alert('New contact has been created')" novalidate >
             <div class="row mb-3">
                 <label for="colFormLabel" class="col-sm-2 col-form-label">Name</label>
                 <div class="col-sm-10">

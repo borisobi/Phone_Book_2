@@ -18,6 +18,7 @@ $name = "";
 $email = "";
 $phone = ""; // Added missing $phone variable
 $category = "";
+$image = "";
 
 $errorMessage = "";
 $successMessage = "";
@@ -51,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $email = $row["email"];
     $phone = $row["phone"];
     $category = $row["category"];
+    $image = $row["image"];
 } 
 else {
     // POST method updates the data of the contact
@@ -59,10 +61,11 @@ else {
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     $category = $_POST["category"];
+    $image = $_POST["image"];
 
     // Checking that we don't have any empty field
     do {
-        if (empty($id) || empty($name) || empty($email) || empty($phone) || empty($category)) {
+        if (empty($id) || empty($name) || empty($email) || empty($phone) || empty($category) || empty($image)) {
             $errorMessage = "All the fields are required";
             break;
         }

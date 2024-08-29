@@ -58,6 +58,7 @@ $view = new ContactView();
     th, td {
       padding: 10px; 
     }
+    }
   </style>
 </head>
 <body>
@@ -71,7 +72,7 @@ $view = new ContactView();
     
     <h2>List of Contacts</h2>
     <br>
-    <a class='btn btn-primary' href='/Phone_book_2/create.php'>Add new contact</a>
+    <a class='btn btn-primary' href='/Phone_book_2/Create.php'>Add new contact</a>
     <br> <br><br>
     <table class="table">
       <thead>
@@ -94,5 +95,12 @@ $view = new ContactView();
       </tbody>
     </table>
   </div>
+
+
+  <script>
+if (window.location.href.indexOf("deleted=true") !== -1) {
+    alert("Contact deleted successfully!");
+}
+</script>
 </body>
 </html>
