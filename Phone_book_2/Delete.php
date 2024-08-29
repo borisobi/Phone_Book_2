@@ -5,6 +5,7 @@ if (isset($_GET["id"])) {
 
     // Check if the user has confirmed the deletion
     if (isset($_POST["confirm_delete"]) && $_POST["confirm_delete"] == "yes") {
+
         // Connecting to the database to delete the contact
         $servername = "localhost";
         $username = "root";
@@ -40,19 +41,17 @@ if (isset($_GET["id"])) {
         $stmt->close();
         $conn->close();
     } else {
-        // Display a confirmation prompt
+        // Yes or no alert 
         echo '
-        
-       <form method="POST" action="">
-  <div class="alert alert-danger">
-    <p>Are you sure you want to delete this contact?</p>
-    <input type="hidden" name="id" value="<?php echo $id; ?>">
-    <button type="submit" name="confirm_delete" value="yes" class="btn btn-danger">Yes</button>
-    <button type="submit" href="Phone_book_2/index.php" name="confirm_delete" value="no" class="btn btn-secondary">No</button>
-  </div>
-</form>
+        <div class="alert alert-danger" role="alert">
+            <p>Are you sure you want to delete this contact?</p>
+            <form method="POST" action="">
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                <button type="submit" name="confirm_delete" value="yes" class="btn btn-danger">Yes</button>
+                <a href="/Phone_book_2/index.php" class="btn btn-secondary">No</a>
+            </form>
+        </div>
         ';
     }
 }
 ?>
-

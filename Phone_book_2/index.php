@@ -50,8 +50,6 @@ $view = new ContactView();
   <title>Phone Book App</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <style>
-
-
     /* CSS for table layout  */
     table {
       width: 100%;  
@@ -64,6 +62,7 @@ $view = new ContactView();
 <body>
   <div class="container my-5">
     <nav class="navbar bg-primary" data-bs-theme="dark">
+        
       </nav>
 
       
