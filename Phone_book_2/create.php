@@ -82,7 +82,7 @@ class ContactForm {
             $filename = $_FILES["image"]["name"];
             $filetype = $_FILES["image"]["type"];
             $filesize = $_FILES["image"]["size"];
-            
+
         // Check if file extension is allowed
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
             
@@ -130,6 +130,8 @@ class ContactForm {
 $db = new Database("localhost", "root", "", "phonebookapp");
 $form = new ContactForm();
 $form->handleSubmission($db);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -158,7 +160,7 @@ $form->handleSubmission($db);
             </div>
         <?php endif; ?>
 
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" onsubmit="return alert('New contact has been created')" >
             <div class="row mb-3">
                 <label for="colFormLabel" class="col-sm-2 col-form-label">Name</label>
                 <div class="col-sm-10">
